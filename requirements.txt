@@ -1,0 +1,4 @@
+black
+pylint==2.0.1
+pylint-cov
+pytest
