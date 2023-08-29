@@ -1,6 +1,26 @@
+activate:
+	@echo "Activating virtual environment..."
+	@python.exe -m venv venv
+	@venv\Scripts\activate
+	@echo "Done."
+
 install: 
-	pip install --upgrade pip
-	pip install -r requirements.txt
+	@echo "Installing..."
+	@python.exe -m pip install --upgrade pip
+	@pip install -r requirements.txt
+	@echo "Done."
 
 lint:
-	pylint --disable=C,R hello.py
+	@echo "Linting using pylint..."
+	@pylint src 
+	@echo "Done."
+
+test:
+	@echo "Testing..."
+	@python -m unittest discover -s src
+	@echo "Done."
+
+run:
+	@echo "Running..."
+	@python src/main.py
+	@echo "Done."
