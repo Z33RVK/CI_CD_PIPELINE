@@ -1,0 +1,11 @@
+	pipeline{ (codeget, build, deploy)
+		agent any{
+		stages{
+			stage(“build”){
+					steps{
+					
+					}
+				}
+			}
+		}
+	} 
