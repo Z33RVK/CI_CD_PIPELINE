@@ -1,12 +1,12 @@
 activate:
 	@echo "Activating virtual environment..."
-	@python.exe -m venv venv
+	@python3 -m venv venv
 	@venv\Scripts\activate
 	@echo "Done."
 
 install: 
 	@echo "Installing..."
-	@python.exe -m pip install --upgrade pip
+	@python3 -m pip install --upgrade pip
 	@pip install -r requirements.txt
 	@echo "Done."
 
@@ -17,7 +17,7 @@ lint:
 
 test:
 	@echo "Testing..."
-	@python -m unittest discover -s src
+	@python3 -m unittest discover -s src
 	@echo "Done."
 
 run:
